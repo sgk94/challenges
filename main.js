@@ -9,16 +9,35 @@ If the input string is empty, return an empty string. The words in the input Str
 
 function order(words){
     let numArr = [1,2,3,4,5,6,7,8,9];
-    let sortedArr = [];
+    let arr = [];
     var newWord = words.split(' ');
-  numArr.forEach(function(num) {
-    newWord.forEach(function(element) {
-      if(element.includes(num)) {
-        sortedArr.push(element)
-      } 
+    if(words === "") {
+      return ""
+    }
+    numArr.forEach(function(num) {
+      newWord.forEach(function(element) {
+        if(element.includes(num)) {
+          arr.push(element)
+        } 
+      })
     })
-  })
-  }
+    sortedArr = arr.join(" ")
+    return sortedArr
+    }
   
   order("is2 Thi1s T4est 3a")
+
+/* #2 
+Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters */
+
+function longest(s1, s2) {
+    let jointStr = s1 + s2;
+   let sortedStr = jointStr.split("").sort().filter((elem, idx, arr) => {
+    return arr.indexOf(elem) === idx
+   });
+  return sortedStr.join('')
+ }
+
+ longest("aretheyhere", "yestheyarehere")
+
 
