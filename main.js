@@ -48,5 +48,12 @@ function longest(s1, s2) {
     
     invert([1,2,3,4,5])
 
+//We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+function strToNumber (str){
+    // put your code here
+   return parseInt(str);
+  }
+
 
 
