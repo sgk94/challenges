@@ -40,4 +40,13 @@ function longest(s1, s2) {
 
  longest("aretheyhere", "yestheyarehere")
 
+ //Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+
+ function invert(array) {
+    console.log(array.map(num => num * -1))
+    }
+    
+    invert([1,2,3,4,5])
+
+
 
